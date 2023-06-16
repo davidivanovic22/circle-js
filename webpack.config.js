@@ -1,20 +1,19 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/main.ts', // Update the entry point based on your project structure
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  // Other webpack configuration options
+  // ...
+
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
         exclude: /node_modules/,
+        use: 'ts-loader',
       },
     ],
   },
+
   resolve: {
     extensions: ['.ts', '.js'],
   },
